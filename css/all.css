@@ -1,3 +1,235 @@
-h1{
-    color: blue;
+/*字體*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*CSS Reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*img{
+    max-width: 100%;
+    height: 100%;
+}*/
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.wrap {
+    max-width: 1296px;
+    margin: 0 auto;
+    font-family: "Noto Sans TC", "Noto Sans", serif;
+    font-weight: 400;
+    color: #000;
+}
+
+.header,
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    height: 96px;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.menu-btn {
+    cursor: pointer;
+    background-color: #fff;
+    border: 0px;
+}
+.material-symbols-outlined{
+    font-size: 0px;
+}
+
+.menu {
+    gap: 40px;
+}
+
+.menu a {
+    padding: 4px 8px;
+}
+
+.menu a:hover {
+    font-weight: 600;
+    background:
+        linear-gradient(#919191, #919191) top right,
+        linear-gradient(#919191, #919191) top right,
+        linear-gradient(#919191, #919191) bottom left,
+        linear-gradient(#919191, #919191) bottom left,
+        linear-gradient(#919191, #919191) bottom right,
+        linear-gradient(#919191, #919191) bottom right,
+        linear-gradient(#919191, #919191) top left,
+        linear-gradient(#919191, #919191) top left;
+    background-size: 8px 1px, 1px 8px;
+    background-repeat: no-repeat;
+}
+
+/*RWD手機板*/
+@media(max-width: 767px){
+    .header {
+        height: 56px;
+        position: relative;
+    }
+    .material-symbols-outlined{
+        font-size: 40px;
+        margin-right: 12px;
+    }    
+    .menu{
+        display: none;
+        position: absolute;
+        top: 56px;
+        z-index: 1;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        gap: 24px;
+        padding: 40px 0;
+        line-height: 1.5;
+        font-size: 20px;
+    }
+    .menu a{
+        display: block;
+    }
+    .close{
+        display: none;
+    }
+    .open{
+        display: flex;
+    }
 }
