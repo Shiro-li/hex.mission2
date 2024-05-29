@@ -241,7 +241,7 @@ body {
     color: #1E1E1E;
     height: 192px;
     font-size: 24px;
-    background-image: url(/img/quote-left.png), url(/img/quote-right.png);
+    background-image: url("img/quote-left.png"), url("img/quote-right.png");
     background-repeat: no-repeat;
     background-position: left top, right bottom;
     display: flex;
@@ -260,7 +260,7 @@ body {
 .mark::after {
     position: absolute;
     content: "";
-    background-image: url(/img/mark.png);
+    background-image: url("img/mark.png");
     background-repeat: no-repeat;
     background-size: contain;
     width: 148px;
