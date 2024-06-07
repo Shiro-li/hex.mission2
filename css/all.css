@@ -166,11 +166,11 @@ body {
 }
 
 .logo {
-    padding-left: 12px;
+    display: block;
 }
 
 .header {
-    height: 96px;
+    padding: 28px 12px;
     border-bottom: 1px solid #F1F1F1;
 }
 
@@ -210,13 +210,15 @@ body {
 /*RWD手機板 表頭*/
 @media(max-width: 767px) {
     .header {
-        height: 56px;
+        padding: 5px 0;
         position: relative;
+    }
+    .logo{
+        padding-left: 12px;
     }
 
     .material-symbols-outlined {
         font-size: 40px;
-        margin-right: 12px;
     }
 
     .menu {
@@ -230,6 +232,9 @@ body {
         gap: 24px;
         padding: 40px 0;
         font-size: 20px;
+    }
+    .menu-btn{
+        padding-right: 12px;
     }
 
     .menu a {
@@ -288,21 +293,23 @@ body {
 
 .mark-p {
     position: relative;
-}
-
-.mark::after {
-    position: absolute;
-    content: "";
     background-image: url("../img/mark.png");
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 0 100%;
+}
+
+/*
+.mark::after {
+    position: absolute;
+    content: "";
     width: 148px;
     height: 8px;
     bottom: 0px;
     left: -10px;
     z-index: -1;
 }
-
+*/
 .banner-p2 {
     display: flex;
     gap: 40px;
@@ -367,14 +374,6 @@ body {
     padding: 120px 0;
 }
 
-.content {
-    margin: 0 auto;
-    max-width: 1296px;
-    font-family: "Noto Sans";
-    color: #3b3b3b;
-    gap: 24px;
-}
-
 .content,
 .tags {
     display: flex;
@@ -383,9 +382,17 @@ body {
 
 .content {
     justify-content: center;
+    margin: 0 auto;
+    max-width: 1296px;
+    font-family: "Noto Sans";
+    color: #3b3b3b;
+    gap: 24px;
 }
 
+
+
 .items {
+    max-width: 636px;
     margin-bottom: 70px;
 }
 
@@ -401,7 +408,7 @@ body {
 }
 
 .content img {
-    max-width: 636px;
+    width: 100%;
     display: block;
     border-radius: 8px;
     outline: 1px solid #F1F1F1;
@@ -475,7 +482,7 @@ body {
     }
 
     .content {
-        width: 100%;
+        padding: 0 12px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -508,17 +515,16 @@ body {
 .wrap-footer {
     background-color: #FAFAFA;
     background-image: url(../img/footer-bg-lg.png);
-    height: 424px;
     background-size: cover;
     background-position: center;
 }
 
 .footer {
     max-width: 1296px;
-    height: 424px;
+    padding: 80px 12px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -531,7 +537,8 @@ body {
 }
 
 .card img {
-    width: 120px;
+    max-width: 120px;
+    display: block;
 }
 
 .card a {
@@ -548,16 +555,12 @@ body {
     gap: 24px;
 }
 
-.social-box {
-    width: 306px;
-}
-
-.social-box a {
-    height: 72px;
+.social-box a{
+    max-width: 306px;
     font-size: 20px;
     display: flex;
     align-items: center;
-    padding-left: 24px;
+    padding: 8px 40px 8px 24px;
     gap: 8px;
     border-radius: 8px;
     outline: 1px solid #C1C1C1;
@@ -569,11 +572,11 @@ body {
     color: #fff;
 }
 
+
 /*RWD手機板 表尾*/
 @media(max-width: 767px) {
     .wrap-footer{
         background-image: url(../img/footer-bg-sm.png);
-        height: 538px;
     }
     .footer{
         flex-direction: column;
@@ -586,12 +589,7 @@ body {
         align-items: center;
         padding: 40px 12px;
     }
-    .social{
-        padding-bottom: 40px;
-    }
-    .social-box{
-        height: 64px;
-    }
+
 }
 
 /*展示hover效果用*/
